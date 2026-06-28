@@ -1,5 +1,5 @@
 #Importacion de los modulos de juegos
-import juego1
+import CulturaGeneral
 import OrdenarLaPalabra
 import juego3
 import juego4
@@ -11,7 +11,7 @@ def mostrarMenu():
     print("   BIENVEIDOS A PLAYMATIC   ")
     print("*" * 30)
     print("1- Juego1")
-    print("2- Ordenar la palabra")
+    print("2- Ordenar la Palabra")
     print("3- juego3")
     print("4- juego4")
     print("5. Salir")
@@ -29,7 +29,7 @@ def iniciarSistema():
         #Estructura de seleccion de juegos/navegacion por el menú
         if opcion == 1:
             print("\n--- Iniciando Juego1 ---")
-            juego1.iniciarJuego()
+            CulturaGeneral.iniciarJuego()
         elif opcion == 2:
             print("\n--- Iniciando Juego2 ---")
             OrdenarLaPalabra.iniciarJuego()
