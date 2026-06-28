@@ -27,3 +27,26 @@ def jugar():
         ranking[nombre] = ranking.get(nombre, 0) + 1
     else:
         print(f"❌ Incorrecto. La palabra era: {palabra}")
+        
+def verRanking():
+    print("\n🏆 Ranking de jugadores 🏆")
+    if not ranking:
+        print("Todavía no hay jugadores en el ranking.")
+    else:
+        for jugador, puntaje in ranking.items():
+            print(f"{jugador}: {puntaje} puntos")
+
+def iniciarJuego():
+    while True:
+        mostrarMenu()
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            jugar()
+        elif opcion == "2":
+            verRanking()
+        elif opcion == "3":
+            print("👋 ¡Gracias por jugar! Hasta la próxima.")
+            break
+        else:
+            print("⚠️ Opción inválida, intenta nuevamente.")
