@@ -1,7 +1,12 @@
 #Importacion de los modulos de juegos
 import CulturaGeneral
+<<<<<<< HEAD
+import OrdenarLaPalabra
+import juego3
+=======
 import juego2
 import escapeRoom
+>>>>>>> 0e0026b4fc11e3dfeb096c4a3bf3f6e26bd27482
 import juego4
 
 #Creo la funcion que muestra el menú
@@ -11,7 +16,7 @@ def mostrarMenu():
     print("   BIENVEIDOS A PLAYMATIC   ")
     print("*" * 30)
     print("1- Juego1")
-    print("2- juego2")
+    print("2- Ordenar la Palabra")
     print("3- juego3")
     print("4- juego4")
     print("5. Salir")
@@ -32,7 +37,7 @@ def iniciarSistema():
             CulturaGeneral.iniciarJuego()
         elif opcion == 2:
             print("\n--- Iniciando Juego2 ---")
-            juego2.iniciarJuego()
+            OrdenarLaPalabra.iniciarJuego()
         elif opcion == 3:
             print("\n--- Iniciando Juego3 ---")
             escapeRoom.iniciarJuego()
