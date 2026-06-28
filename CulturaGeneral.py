@@ -41,3 +41,52 @@ def cultura_general():
 
         print(f"\nPregunta {i}")
         print(pregunta["pregunta"])
+         # Muestra las opciones de respuesta
+        for j, opcion in enumerate(pregunta["opciones"], start=1):
+            print(f"{j}. {opcion}")
+
+        # Valida que el usuario ingrese un número entre 1 y 4
+        while True:
+            try:
+                respuesta = int(input("Ingrese su respuesta (1-4): "))
+
+                if 1 <= respuesta <= 4:
+                    break
+                else:
+                    print("Debe ingresar un número entre 1 y 4.")
+
+            except ValueError:
+                print("Ingrese un número válido.")
+
+        # Verifica si la respuesta es correcta
+        if respuesta == pregunta["respuesta"]:
+            print("¡Correcto!")
+            puntaje += 20
+
+        else:
+            correcta = pregunta["opciones"][pregunta["respuesta"] - 1]
+            print(f"Incorrecto. La respuesta correcta era: {correcta}")
+
+    # Muestra el resultado final
+    print("\n===================================")
+    print("           RESULTADO")
+    print("===================================")
+    print(f"Puntaje final: {puntaje} de 100")
+
+    # Solicita el nombre del jugador
+    nombre = input("Ingrese su nombre: ")
+
+    # Guarda el nombre y el puntaje en el archivo ranking.txt
+    archivo = open("ranking.txt", "a")
+    archivo.write(nombre + " - " + str(puntaje) + " puntos\n")
+    archivo.close()
+
+    print("¡Puntaje guardado correctamente!")
+    # Solicita al usuario que escriba el comando para iniciar el juego
+inicio = input("Escribí 'Iniciar Juego' para comenzar: ")
+
+# Verifica si el usuario escribió correctamente el comando
+if inicio.lower().strip() == "iniciar juego":
+    cultura_general()
+else:
+    print("No se inició el juego.")
