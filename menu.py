@@ -44,3 +44,7 @@ def iniciarSistema():
             break
         else: 
             print("\n Opción incorrecta: Por favor, elija un numero del 1 al 5")
+
+#condicion verdadera para que iniciarSistema funcione directamente
+if __name__ == "__main__":
+    iniciarSistema
