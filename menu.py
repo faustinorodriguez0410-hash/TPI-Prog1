@@ -1,7 +1,7 @@
 #Importacion de los modulos de juegos
 import juego1
 import juego2
-import juego3
+import escapeRoom
 import juego4
 
 #Creo la funcion que muestra el menú
@@ -35,7 +35,7 @@ def iniciarSistema():
             juego2.iniciarJuego()
         elif opcion == 3:
             print("\n--- Iniciando Juego3 ---")
-            juego3.iniciarJuego()
+            escapeRoom.iniciarJuego()
         elif opcion == 4:
             print("\n--- Iniciando Juego4 ---")
             juego4.iniciarJuego()
