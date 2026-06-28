@@ -29,3 +29,15 @@ def cultura_general():
             "respuesta": 3
         }
     ]
+    # Variable donde se acumula el puntaje
+    puntaje = 0
+
+    print("\n===================================")
+    print("      CULTURA GENERAL")
+    print("===================================")
+
+    # Recorre todas las preguntas de la lista
+    for i, pregunta in enumerate(preguntas, start=1):
+
+        print(f"\nPregunta {i}")
+        print(pregunta["pregunta"])
