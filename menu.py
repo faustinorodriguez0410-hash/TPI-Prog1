@@ -1,7 +1,12 @@
 #Importacion de los modulos de juegos
 import CulturaGeneral
+<<<<<<< HEAD
 import OrdenarLaPalabra
 import juego3
+=======
+import juego2
+import escapeRoom
+>>>>>>> 0e0026b4fc11e3dfeb096c4a3bf3f6e26bd27482
 import juego4
 
 #Creo la funcion que muestra el menú
@@ -35,7 +40,7 @@ def iniciarSistema():
             OrdenarLaPalabra.iniciarJuego()
         elif opcion == 3:
             print("\n--- Iniciando Juego3 ---")
-            juego3.iniciarJuego()
+            escapeRoom.iniciarJuego()
         elif opcion == 4:
             print("\n--- Iniciando Juego4 ---")
             juego4.iniciarJuego()
