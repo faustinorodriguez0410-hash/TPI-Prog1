@@ -83,10 +83,6 @@ def cultura_general():
 
     print("¡Puntaje guardado correctamente!")
     # Solicita al usuario que escriba el comando para iniciar el juego
-inicio = input("Escribí 'Iniciar Juego' para comenzar: ")
-
-# Verifica si el usuario escribió correctamente el comando
-if inicio.lower().strip() == "iniciar juego":
+def iniciarJuego():
     cultura_general()
-else:
-    print("No se inició el juego.")
+    
