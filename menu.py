@@ -4,7 +4,7 @@ import juego2
 import juego3
 import juego4
 
-#Creo la funcion que contiene el menú
+#Creo la funcion que muestra el menú
 def mostrarMenu():
     #Mensaje de bienvenida al usuario y opciones a elegir
     print("\n" + "*" * 30)
@@ -15,3 +15,14 @@ def mostrarMenu():
     print("3- juego3")
     print("4- juego4")
     print("5. Salir")
+
+#Creo la funcion que inicia el sistema (Maneja el bucle del menú y la seleccion de juegos)
+def iniciarSistema():
+    while True:
+        mostrarMenu()
+        opcion_str = input("Ingresa tu elección: ")
+        #Valididación de datos para evitar errores si ingresan un numero no esperado
+        if not opcion_str.isdigit():
+            print("ERROR: Porfavor, ingrese un número valido (1 al 5).")
+
+    opcion = int(opcion_str)
