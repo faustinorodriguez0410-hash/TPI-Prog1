@@ -23,6 +23,24 @@ def iniciarSistema():
         opcion_str = input("Ingresa tu elección: ")
         #Valididación de datos para evitar errores si ingresan un numero no esperado
         if not opcion_str.isdigit():
-            print("ERROR: Porfavor, ingrese un número valido (1 al 5).")
+            print("ERROR: Solo puede ingresar números, porfavor intente nuevamente.")
 
-    opcion = int(opcion_str)
+        opcion = int(opcion_str)
+        #Estructura de seleccion de juegos/navegacion por el menú
+        if opcion == 1:
+            print("\n--- Iniciando Juego1 ---")
+            juego1.iniciarJuego()
+        elif opcion == 2:
+            print("\n--- Iniciando Juego2 ---")
+            juego2.iniciarJuego()
+        elif opcion == 3:
+            print("\n--- Iniciando Juego3 ---")
+            juego3.iniciarJuego()
+        elif opcion == 4:
+            print("\n--- Iniciando Juego4 ---")
+            juego4.iniciarJuego()
+        elif opcion == 5:
+            print("\n--- ¡Gracias por jugar con nosotros!")
+            break
+        else: 
+            print("\n Opción incorrecta: Por favor, elija un numero del 1 al 5")
