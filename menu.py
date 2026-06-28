@@ -1,5 +1,5 @@
 #Importacion de los modulos de juegos
-import juego1
+import CulturaGeneral
 import juego2
 import escapeRoom
 import juego4
@@ -29,7 +29,7 @@ def iniciarSistema():
         #Estructura de seleccion de juegos/navegacion por el menú
         if opcion == 1:
             print("\n--- Iniciando Juego1 ---")
-            juego1.iniciarJuego()
+            CulturaGeneral.iniciarJuego()
         elif opcion == 2:
             print("\n--- Iniciando Juego2 ---")
             juego2.iniciarJuego()
