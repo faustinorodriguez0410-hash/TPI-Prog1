@@ -57,6 +57,43 @@ def jugarEscapeRoom():
     
     guardarRanking(nombre, intentosTotales)
 
+def mostrarMenu():
+    print("\n" + "=" * 40)
+    print("   🎮 BIENVENIDO AL ESCAPE ROOM 🎮")
+    print("=" * 40)
+    print("1 - Jugar")
+    print("2 - Ver Ranking")
+    print("3 - Salir")
+    print("=" * 40)
+
+def verRanking():
+    print("\n🏆 Ranking de jugadores 🏆")
+    try:
+        # Abrimos el archivo en modo lectura ("r")
+        with open("rankingEscapeRoom.txt", "r") as archivo:
+            lineas = archivo.readlines() # Leemos todas las líneas guardadas
+            
+            if not lineas:
+                print("Todavía no hay jugadores en el ranking.")
+            else:
+                for linea in lineas:
+                    # .strip() quita los espacios y saltos de línea extra
+                    print(linea.strip())
+                    
+    except FileNotFoundError:
+        # Si el archivo aún no fue creado porque nadie jugó, mostramos este mensaje
+        print("Todavía no hay jugadores en el ranking.")
 def iniciarJuego():
-    """Punto de entrada del juego 4, utilizado en el menu.py."""
-    jugarEscapeRoom()
+    while True:
+        mostrarMenu()
+        opcion = input("Elige una opción: ")
+
+        if opcion == "1":
+            jugarEscapeRoom()
+        elif opcion == "2":
+            verRanking()
+        elif opcion == "3":
+            print("👋 ¡Gracias por jugar! Hasta la próxima.")
+            break
+        else:
+            print("⚠️ Opción inválida, intenta nuevamente.")
