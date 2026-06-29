@@ -24,6 +24,7 @@ def iniciarSistema():
         #Valididación de datos para evitar errores si ingresan un numero no esperado
         if not opcion_str.isdigit():
             print("ERROR: Solo puede ingresar números, porfavor intente nuevamente.")
+            continue
 
         opcion = int(opcion_str)
         #Estructura de seleccion de juegos/navegacion por el menú
@@ -47,4 +48,4 @@ def iniciarSistema():
 
 #condicion verdadera para que iniciarSistema funcione directamente
 if __name__ == "__main__":
-    iniciarSistema
+    iniciarSistema()
