@@ -8,7 +8,7 @@ def cultura_general():
     # Lista que contiene las preguntas, las opciones y la respuesta correcta
     preguntas = [
         {"pregunta": "¿Cuál es el planeta más grande del Sistema Solar?", "opciones": ["Marte", "Júpiter", "Venus", "Saturno"], "respuesta": 2},
-        {"pregunta": "¿Cuántos continentes hay en el mundo?", "opciones": ["5", "6", "7", "8"], "respuesta": 3},
+        {"pregunta": "¿Cuántos continentes hay en el mundo?", "opciones": ["5", "6", "7", "8"], "respuesta": 2},
         {"pregunta": "¿Quién pintó la Mona Lisa?", "opciones": ["Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh", "Miguel Ángel"], "respuesta": 2},
         {"pregunta": "¿Cuál es la capital de Argentina?", "opciones": ["Rosario", "Córdoba", "Buenos Aires", "Mendoza"], "respuesta": 3},
         {"pregunta": "¿Qué océano es el más grande del planeta?", "opciones": ["Atlántico", "Índico", "Pacífico", "Ártico"], "respuesta": 3}
@@ -42,13 +42,13 @@ def cultura_general():
     print(f"\nPuntaje final: {puntaje} de 100")
     # Solicita el nombre del jugador
     nombre = input("Ingrese su nombre para el ranking: ")
-     # Guarda el nombre y el puntaje en el archivo rankingCultural.txt
+     # Guarda el nombre y el puntaje en el archivo ranking.txt
     guardarRanking(nombre, puntaje)
 
 def verRanking():
     """Muestra el ranking desde el archivo de texto."""
     print("\n🏆 Ranking de Cultura General 🏆")
-    try:
+    try:    
         with open("rankingCultura.txt", "r") as archivo:
             lineas = archivo.readlines()
             if not lineas:
