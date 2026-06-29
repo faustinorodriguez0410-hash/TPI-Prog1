@@ -14,7 +14,7 @@ def mostrarMenu():
 
 def jugar():
     nombre = input("Ingresa tu nombre: ")
-    palabras = ["python", "flask", "programacion", "matematica", "universidad"]
+    palabras = ["python", "flask", "programacion", "matematica", "universidad,"]
     palabra = random.choice(palabras)
     desordenada = "".join(random.sample(palabra, len(palabra)))
 

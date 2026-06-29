@@ -2,7 +2,8 @@
 import CulturaGeneral
 import OrdenarLaPalabra
 import escapeRoom
-import juego4
+import EscapaDelLaberinto
+
 
 #Creo la funcion que muestra el menú
 def mostrarMenu():
@@ -10,10 +11,10 @@ def mostrarMenu():
     print("\n" + "*" * 30)
     print("   BIENVEIDOS A PLAYMATIC   ")
     print("*" * 30)
-    print("1- Juego1")
+    print("1- Cultura Genaral")
     print("2- Ordenar la Palabra")
-    print("3- juego3")
-    print("4- juego4")
+    print("3- Escape Room")
+    print("4- Escapa del Laberinto")
     print("5. Salir")
 
 #Creo la funcion que inicia el sistema (Maneja el bucle del menú y la seleccion de juegos)
@@ -39,7 +40,7 @@ def iniciarSistema():
             escapeRoom.iniciarJuego()
         elif opcion == 4:
             print("\n--- Iniciando Juego4 ---")
-            juego4.iniciarJuego()
+            EscapaDelLaberinto.iniciarJuego()
         elif opcion == 5:
             print("\n--- ¡Gracias por jugar con nosotros!")
             break
