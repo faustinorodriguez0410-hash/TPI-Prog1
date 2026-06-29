@@ -58,5 +58,5 @@ def jugarEscapeRoom():
     guardarRanking(nombre, intentosTotales)
 
 def iniciarJuego():
-    """Punto de entrada del juego 4, utilizado en el menu.py."""
+    """Punto de entrada del juego 3, utilizado en el menu.py."""
     jugarEscapeRoom()
